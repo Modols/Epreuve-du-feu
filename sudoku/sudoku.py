@@ -1,7 +1,6 @@
 import sys
 import numpy as np
 
-# chaine = list(sys.argv[1])
 file_1 = sys.argv[1]
 
 array = []
@@ -15,8 +14,6 @@ for x in f1:
     array.append(x)
 f1.close()
 
-# print(np.array(array))
-
 def findNumber(tab, x, y, index):
     array= []
     tabTransi = []
@@ -28,7 +25,6 @@ def findNumber(tab, x, y, index):
         if(ix != "_"):
             array.append(int(ix))
     array.sort()
-    
     
     for i in range(1, 10):
         if i not in array:
@@ -58,37 +54,4 @@ for g in range(len(array)):
                     remplace = findNumber(array, g, p, index)
                     array[g][p] = (array[g][p].replace("_", str(remplace), 1))
                    
-
-
-
-
-
 print(np.array(array))
-
-
-
-
-
-# ['195' '784' '266']
-# ['386' '529' '147']
-# ['472' '163' '985']
-# ['637' '852' '419']
-# ['859' '641' '732']
-# ['214' '397' '658']
-# ['923' '418' '576']
-# ['548' '976' '321']
-# ['761' '235' '894']
-
-
-
-# 195|784|263
-# 386|529|147
-# 472|163|985
-# ---+---+---
-# 637|852|419
-# 859|641|732
-# 214|397|658
-# ---+---+---
-# 923|418|576
-# 548|976|321
-# 761|235|894
